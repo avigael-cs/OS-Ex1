@@ -1,19 +1,18 @@
-#include "part_b.h"
-#include <sys/types.h>
 #include <stdio.h>
 #include <unistd.h>
-#define count 10
+#include <stdlib.h>
+#define count 100
 
 //The function fork and clone processes are using
 void print(const char *text){
 
    for(int i=0; i<count; i++){
       printf("Hello from %s\n", text);
-      usleep(10000); //stop time
+      usleep(100000); //stop time
    }
 }
 
-int ourFork(){
+int main(){
     pid_t pid;
     pid = fork();//Create child 
 

@@ -1,20 +1,20 @@
-#include "part_b.h"
 #include <stdio.h>
-#include <syslog.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
+#include <stdlib.h>
+#include <syslog.h>
 
 #define three_sec_ 3000000
 
-int ourDaemon()
+int main()
 {
 
     pid_t pid = fork();//this fork creats a child - Daemon
-
+     if(pid < 0){//Error - something went wrong
+        fprintf(stderr, "Fork failed");
+        return 1;
+    }
     if (pid == 0)
     { 
-
         //Move the root dir -to not block the file system.
         chdir("/");
 

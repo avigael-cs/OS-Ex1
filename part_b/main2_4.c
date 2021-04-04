@@ -1,16 +1,43 @@
-#include "part_b.h"
-#include <stdio.h>
 #define _GNU_SOURCE
-int main()
-{
-    printf("*********************Fork :************************\n");
-    ourFork();
+#include <stdio.h>
+#include <unistd.h>
+#include <sched.h>
+#include <stdlib.h>
 
-    printf("*********************Clone :************************\n");
-    ourClone();
+#define STACK_SIZE 10000
+#define CYCLES 30
+//run all
+char child_stack[STACK_SIZE+1]; 
 
-    printf("***********************Daemon :*********************\n");
-    ourDaemon();
+
+int main2_1(){
+    char * args[2] = {"./main1",NULL};
+    execvp(args[0], args);
+    return 0;
+}
+
+int main2_2(){
+    char * args[2] = {"./main2",NULL};
+    execvp(args[0], args);
+    return 0;
+}
+
+int main2_3(){
+    char * args[2] = {"./main3",NULL};
+    execvp(args[0], args);
+    return 0;
+}
+
+
+int main() {
+    int clone1 = clone(main2_1, child_stack+STACK_SIZE, CLONE_PARENT, 0);
+    int clone2 = clone(main2_2, child_stack+STACK_SIZE, CLONE_PARENT, 0);
+    int clone3 = clone(main2_3, child_stack+STACK_SIZE, CLONE_PARENT, 0);
     
+    printf("clone id = %d\n", clone1);
+    printf("clone id = %d\n", clone2);
+    printf("clone id = %d\n", clone3);
+    printf("parent id %d\n", getpid());
+    sleep(10);
     return 0;
 }
