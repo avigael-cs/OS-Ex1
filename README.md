@@ -2,10 +2,6 @@
 
 ###  Part A – compilation and libraries:
 
-Intro: when we write a “normal” C application, we have all the source code files. We compile and link them to a single executable file.
-
-We can also compile our code to a library that can be included to other projects statically or dynamically.
-
 In this task we are requested to produce a simple C executable, and a shared library that can be used by this executable. You are also requested to provide a Make file, that will help to utilize each of the sub tasks.
 
 Subtask 1 - 1.1 - In this question we were required to write a simple program called "hello_ariel" and write a main function that would run the program "hello_ariel".
