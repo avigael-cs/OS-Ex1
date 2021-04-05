@@ -1,7 +1,5 @@
 # OS - EX1 -  compiler, shared libraries and processes.
 
-Authors: Elad Vaknin and Avigael Abitbol
-
 ###  Part A – compilation and libraries:
 
 Intro: when we write a “normal” C application, we have all the source code files. We compile and link them to a single executable file.
@@ -30,3 +28,6 @@ Subtask 2 -  Start 2 processes with the same shared memory (like threads). Like 
 Subtask 3 -  Start a daemon process.
 
 Subtask 4  - Modify your app, to have all the above subtasks together. Show the relevant processes tree  (pstree) that will reflect the tasks result.
+
+
+Authors: Elad Vaknin and Avigael Abitbol
