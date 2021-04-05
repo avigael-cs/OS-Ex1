@@ -8,13 +8,13 @@ We can also compile our code to a library that can be included to other projects
 
 In this task we are requested to produce a simple C executable, and a shared library that can be used by this executable. You are also requested to provide a Make file, that will help to utilize each of the sub tasks.
 
-Subtask 1 1.1 -  write a “hello Ariel” program,in a separate file named “hello_Ariel” file (c and h). 1.2 write a short main “main1_1” that will include “hello_Ariel”, and use it. 1.3 write a make file to compile the code.
+Subtask 1 -  1.1 -  write a “hello Ariel” program,in a separate file named “hello_Ariel” file (c and h). 1.2 write a short main “main1_1” that will include “hello_Ariel”, and use it. 1.3 write a make file to compile the code.
 
-Subtask 2 2.1 -  compile “hello_ariel” as a shared object (.so) library 2.2 write a short main “main1_2” that will use this library 2.3 compile to a single executable and update the make file.
+Subtask 2 -  2.1 -  compile “hello_ariel” as a shared object (.so) library 2.2 write a short main “main1_2” that will use this library 2.3 compile to a single executable and update the make file.
 
-Subtask 3 3.1 -  write a short main “main1_3”, that will load the lib file from subtask 2 in runtime. 3.2 compile the main and alter the make file.
+Subtask 3 -  3.1 -  write a short main “main1_3”, that will load the lib file from subtask 2 in runtime. 3.2 compile the main and alter the make file.
 
-Subtask 4 4.1  - practice with tools (which functions exist, which libs are used) 4.2 alter the make file to have default build, and clean options
+Subtask 4 -  4.1  - practice with tools (which functions exist, which libs are used) 4.2 alter the make file to have default build, and clean options
 
 
 ###   Part B - Processes:
